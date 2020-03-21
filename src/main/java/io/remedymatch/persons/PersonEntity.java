@@ -1,5 +1,7 @@
-package io.remedymatch.people;
+package io.remedymatch.persons;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Column;
@@ -9,7 +11,9 @@ import javax.persistence.Id;
 import java.util.UUID;
 
 @Entity
-public class PeopleEntity {
+@Getter
+@Setter
+public class PersonEntity {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
